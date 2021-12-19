@@ -3,6 +3,8 @@
 <meta charset="utf-8">
 <title>Login</title>
 <link rel="stylesheet" href="css/style.css" />
+<script src="./js/login.js"></script>
+<script src="./js/index.js"></script>
 </head>
 <body>
 <?php
@@ -22,8 +24,9 @@ and password='".md5($password)."'";
 	    header("Location: index.php");
          }else{
 	echo "<div class='form'>
-<h3>Username/password is incorrect.</h3>
+	<h3>Username/password is incorrect.</h3>
 <br/>Apasa aici <a href='login.php'>Login</a></div>";
+<li class='form_elem'><button id='loginBtn'>Submit</button></li>
 	}
     }else{
 ?>

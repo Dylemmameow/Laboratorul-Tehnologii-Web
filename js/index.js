@@ -1,3 +1,20 @@
+$(document).ready(function () {
+    currTheme = localStorage.getItem("currentTheme");
+    changeTheme(currTheme);
+
+    $("#regBtn").click(() => {
+        regFormValidation();
+    });
+
+    $("#loginBtn").click(() => {
+        logFormValidation();
+    });
+
+    $("#contactForm").click(() => {
+        contactFormValidation();
+    });
+});
+
 function regFormValidation() {
     let form = $("form[name='regForm']");
     form.validate({
